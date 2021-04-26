@@ -32,6 +32,7 @@ export let TestEnvVars = {
     waitForExecution: "__waitForExecution__",
     arguments: "__arguments__",
     failOnStderr: "__failOnStderr__",
+    publishPipelineMetadata: "__publishPipelineMetadata__",
     chartNameForACR: "__chartNameForACR__",
     chartPathForACR: "__chartPathForACR__"
 };
@@ -62,6 +63,7 @@ export let OperatingSystems = {
 
 export const testChartName = "testChartName";
 export const testChartPath = "test/testChartPath";
+export const testChartVersion = "1.1.1";
 export const testReleaseName = "testReleaseName";
 export const isHelmV3 = "__isHelmV3__";
 export const testNamespace = "testNamespace";
@@ -71,8 +73,6 @@ export const testChartPathForACR = "test/testChartPathForACR";
 export const testAzureResourceGroupForACR = "test-rg";
 export const testAzureSubscriptionEndpointForACR = "RMTest";
 export const testAzureContainerRegistry = "sonayak.azurecr.io";
-export const multipleValueFiles = "values1.yaml\nvalues2.yaml";
-export const singleValueFile = "values1.yaml";
 
 /**
  * Formats the given path to be appropriate for the operating system.
@@ -85,3 +85,10 @@ export function formatPath(canonicalPath: string) {
         return "/" + canonicalPath;
     }
 };
+
+/**
+ * Returns '--debug' flag if the pipeline is in debug mode otherwise empty string is returned.
+ */
+export function formatDebugFlag(): string {
+    return process.env.SYSTEM_DEBUG === 'true' ? ' --debug' : '';
+}

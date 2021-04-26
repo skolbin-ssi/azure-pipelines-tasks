@@ -3,17 +3,12 @@
         {
             "module": "../Common/MSBuildHelpers",
             "type": "ps"
-        },
-        {
-            "module": "../Common/java-common",
-            "type": "node",
-            "compile": true
         }
     ],
     "rm": [
         {
             "items": [
-                "node_modules/java-common/node_modules/azure-pipelines-task-lib"
+                "node_modules/azure-pipelines-tasks-java-common/node_modules/azure-pipelines-task-lib"
             ],
             "options": "-Rf"
         }
@@ -22,7 +17,7 @@
         "nugetv2": [
             {
                 "name": "VstsTaskSdk",
-                "version": "0.9.0",
+                "version": "0.11.0",
                 "repository": "https://www.powershellgallery.com/api/v2/",
                 "cp": [
                     {
