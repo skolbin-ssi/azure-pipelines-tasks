@@ -1,0 +1,18 @@
+{
+    "rm": [       
+        {
+            "items": [
+                "node_modules/azure-pipelines-tasks-artifacts-common/node_modules/azure-pipelines-task-lib"
+            ],
+            "options": "-Rf"
+        }
+    ],
+    "cp": [
+        {
+            "source": [
+                "data"
+            ],
+            "options": "-R"
+        }
+    ]
+}

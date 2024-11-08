@@ -16,7 +16,7 @@
   "author": "Microsoft Corporation",
   "version": {
     "Major": 3,
-    "Minor": 216,
+    "Minor": 247,
     "Patch": 0
   },
   "releaseNotes": "ms-resource:loc.releaseNotes",
@@ -209,6 +209,7 @@
       "visibleRule": "javaHomeSelection = JDKVersion",
       "options": {
         "default": "default",
+        "1.17": "JDK 17",
         "1.11": "JDK 11",
         "1.10": "JDK 10 (out of support)",
         "1.9": "JDK 9 (out of support)",
@@ -422,6 +423,7 @@
     "FileNotFound": "ms-resource:loc.messages.FileNotFound",
     "FailedToAppendCC": "ms-resource:loc.messages.FailedToAppendCC",
     "NoTestResults": "ms-resource:loc.messages.NoTestResults",
-    "chmodGradlew": "ms-resource:loc.messages.chmodGradlew"
+    "chmodGradlew": "ms-resource:loc.messages.chmodGradlew",
+    "UnableToExtractGradleVersion": "ms-resource:loc.messages.UnableToExtractGradleVersion"
   }
 }

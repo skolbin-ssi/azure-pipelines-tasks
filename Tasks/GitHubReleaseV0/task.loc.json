@@ -14,8 +14,8 @@
   "preview": true,
   "version": {
     "Major": 0,
-    "Minor": 211,
-    "Patch": 0
+    "Minor": 246,
+    "Patch": 4
   },
   "demands": [],
   "minimumAgentVersion": "2.0.0",
@@ -27,6 +27,8 @@
       "visibleRule": "addChangeLog = true"
     }
   ],
+  "deprecated": true,
+  "deprecationMessage": "The GitHubRelease@0 task is deprecated, please use a newer version of the GitHubRelease task",
   "inputs": [
     {
       "name": "gitHubConnection",
@@ -257,6 +259,10 @@
   "execution": {
     "Node10": {
       "target": "main.js"
+    },
+    "Node16": {
+      "target": "main.js",
+      "argumentFormat": ""
     }
   },
   "messages": {

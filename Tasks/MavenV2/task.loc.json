@@ -17,7 +17,7 @@
   "author": "Microsoft Corporation",
   "version": {
     "Major": 2,
-    "Minor": 214,
+    "Minor": 246,
     "Patch": 0
   },
   "releaseNotes": "ms-resource:loc.releaseNotes",
@@ -48,6 +48,8 @@
       "isExpanded": true
     }
   ],
+  "deprecated": true,
+  "deprecationMessage": "The Maven@2 task is deprecated, please use a newer version of the Maven task",
   "inputs": [
     {
       "name": "mavenPOMFile",
@@ -408,6 +410,10 @@
       "argumentFormat": ""
     },
     "Node16": {
+      "target": "maventask.js",
+      "argumentFormat": ""
+    },
+    "Node20_1": {
       "target": "maventask.js",
       "argumentFormat": ""
     }

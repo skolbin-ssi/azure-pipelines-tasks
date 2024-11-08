@@ -12,8 +12,8 @@
   "author": "Microsoft Corporation",
   "version": {
     "Major": 2,
-    "Minor": 201,
-    "Patch": 0
+    "Minor": 246,
+    "Patch": 6
   },
   "demands": [
     "JDK"
@@ -31,6 +31,8 @@
       "isExpanded": true
     }
   ],
+  "deprecated": true,
+  "deprecationMessage": "The AndroidSigning@2 task is deprecated, please use the latest version of the AndroidSigning task",
   "inputs": [
     {
       "name": "files",
@@ -142,16 +144,28 @@
     "Node10": {
       "target": "preandroidsigning.js",
       "argumentFormat": ""
+    },
+    "Node16": {
+      "target": "preandroidsigning.js",
+      "argumentFormat": ""
     }
   },
   "execution": {
     "Node10": {
       "target": "androidsigning.js",
       "argumentFormat": ""
+    },
+    "Node16": {
+      "target": "androidsigning.js",
+      "argumentFormat": ""
     }
   },
   "postjobexecution": {
     "Node10": {
+      "target": "postandroidsigning.js",
+      "argumentFormat": ""
+    },
+    "Node16": {
       "target": "postandroidsigning.js",
       "argumentFormat": ""
     }

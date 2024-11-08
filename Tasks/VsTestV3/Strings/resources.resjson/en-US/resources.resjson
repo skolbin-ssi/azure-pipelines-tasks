@@ -1,7 +1,7 @@
 {
   "loc.friendlyName": "Visual Studio Test",
   "loc.helpMarkDown": "[Learn more about this task](https://go.microsoft.com/fwlink/?LinkId=835764)",
-  "loc.description": "Run unit and functional tests (Selenium, Appium, Coded UI test, etc.) using the Visual Studio Test (VsTest) runner. Test frameworks that have a Visual Studio test adapter such as MsTest, xUnit, NUnit, Chutzpah (for JavaScript tests using QUnit, Mocha and Jasmine), etc. can be run. Tests can be distributed on multiple agents using this task (version 2).",
+  "loc.description": "Run unit and functional tests (Selenium, Appium, Coded UI test, etc.) using the Visual Studio Test (VsTest) runner. Test frameworks that have a Visual Studio test adapter such as MsTest, xUnit, NUnit, Chutzpah (for JavaScript tests using QUnit, Mocha and Jasmine), etc. can be run. Tests can be distributed on multiple agents using this task (version 2 and later).",
   "loc.instanceNameFormat": "VsTest - $(testSelector)",
   "loc.releaseNotes": "<ul><li><b>Run tests using an agent job:</b> Unified agent across Build, Release and Test allows for automation agents to be used for testing purposes as well. You can distribute tests using the multi-agent job setting. The multi-config job setting can be used to replicate tests in different configurations. <a href=\"https://aka.ms/testingwithphases\" target=\"_blank\">More information</a></li><li><b>Test Impact Analysis:</b> Automatically select and run only the tests needed to validate the code change.</li><li>Use the <b>Visual Studio Test Platform Installer task</b> to run tests without needing a full Visual Studio installation.</li></ul>",
   "loc.group.displayName.testSelection": "Test selection",
@@ -34,7 +34,7 @@
   "loc.input.help.uiTests": "To run UI tests, ensure that the agent is set to run in interactive mode. Setting up an agent to run interactively must be done before queueing the build / release. Checking this box does <b>not</b> configure the agent in interactive mode automatically. This option in the task is to only serve as a reminder to configure agent appropriately to avoid failures. <br><br> Hosted Windows agents from the VS 2015 and 2017 pools can be used to run UI tests.<br> [More information](https://aka.ms/uitestmoreinfo).",
   "loc.input.label.vstestLocationMethod": "Select test platform using",
   "loc.input.label.vsTestVersion": "Test platform version",
-  "loc.input.help.vsTestVersion": "The version of Visual Studio test to use. If latest is specified it chooses Visual Studio 2017 or Visual Studio 2015 depending on what is installed. Visual Studio 2013 is not supported. To run tests without needing Visual Studio on the agent, use the ‘Installed by tools installer’ option. Be sure to include the ‘Visual Studio Test Platform Installer’ task to acquire the test platform from nuget.",
+  "loc.input.help.vsTestVersion": "The version of Visual Studio test to use. If latest is specified it chooses latest Visual Studio version starting from VS2022 followed by VS2019, VS2017 and VS2015 depending on what is installed. Visual Studio 2013 is not supported. To run tests without needing Visual Studio on the agent, use the ‘Installed by tools installer’ option. Be sure to include the ‘Visual Studio Test Platform Installer’ task to acquire the test platform from nuget.",
   "loc.input.label.vstestLocation": "Path to vstest.console.exe",
   "loc.input.help.vstestLocation": "Optionally supply the path to VSTest.",
   "loc.input.label.runSettingsFile": "Settings file",
